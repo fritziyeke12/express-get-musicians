@@ -3,7 +3,7 @@ const app = express();
 const {Musician} = require("./Musician")
 const {sequelize} = require("./db")
 
-const port = 3002;
+const port = 3000;
 
 //TODO
 app.get("/musicians", async (req, res) => {
@@ -13,5 +13,5 @@ app.get("/musicians", async (req, res) => {
 
 app.listen(port, () => {
     sequelize.sync();
-    console.log(`Listening on port ${port}`)
+    console.log(`Listening on http://localhost:${port}`)
 })
